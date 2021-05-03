@@ -8,7 +8,7 @@ body {
 main {
     margin: 0;
     background-origin: initial;
-    background-color: lawngreen;
+    background-color: skyblue;
 }
 
 .mainn{
@@ -200,6 +200,9 @@ p, .contactUs{
 
 .None{
     background-color: magenta;
+    image-resolution: 35px;
+    user-zoom: 100%;
+    -webkit-break-after: avoid-region;
 }
 
 .Abdiwahid_Awesome{
@@ -211,4 +214,42 @@ p, .contactUs{
 
 .change{
     background-color: olivedrab;
+    kerning: 0vmin;
+    quotes: unset;
+    scrollbar-arrow-color: violet;
+    align-self: start;
+    unicode-bidi: isolate-override;
+    border-end-end-radius: 10px;
+    background-position-y: top;
+}
+
+.Contact_me{
+    background-color: white;
+    vertical-align: super;
+    align-items: flex-start;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+    glyph-orientation-horizontal: unset;
+}
+
+.dubs_tech{
+    width: 350px;
+    margin-top:-620px;
+}
+
+.quotes{
+    width: 444px;
+}
+
+.thankYou{
+    width: 433px;
+}
+
+.Colors{
+    background-color: gold;
+}
+
+.Large{
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
