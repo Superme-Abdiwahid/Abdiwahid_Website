@@ -13,6 +13,9 @@ main {
 
 .mainn{
     width: 100%;
+    font: oblique;
+    animation: cubic-bezier(1, 0, 0, 1);
+    animation-play-state: running;
 }
 
 nav {
@@ -173,4 +176,39 @@ main, p, .contactUs{
 p, .contactUs{
     color: black;
     font-size: 35px;
+}
+
+.About-Info{
+    font-size: 35px;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.graduation{
+    width: 650px;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation: cubic-bezier(1, 0, 0, 1);
+}
+
+.Abdiwahid{
+    background-clip: inherit;
+    background-blend-mode: saturation;
+    color:black;
+    backface-visibility: initial;
+}
+
+.None{
+    background-color: magenta;
+}
+
+.Abdiwahid_Awesome{
+    width: 425px;
+    position: left;
+    margin-left: 0vmax;
+    margin-right: 1200px;
+}
+
+.change{
+    background-color: olivedrab;
 }
