@@ -79,7 +79,7 @@ nav a:hover {
         width: 500px;
     }
     .abdiwahid{
-        display: -ms-flexbox;
+        
     }
 }
 
@@ -101,7 +101,6 @@ nav a:hover {
     font-variant: initial;
     font-kerning: normal;
     font-size: 300%;
-    display: -webkit-flex;
 }
 
 .style-instagram{
@@ -195,14 +194,12 @@ p, .contactUs{
     background-clip: inherit;
     background-blend-mode: saturation;
     color:black;
-    backface-visibility: initial;
 }
 
 .None{
     background-color: magenta;
     image-resolution: 35px;
     user-zoom: 100%;
-    -webkit-break-after: avoid-region;
 }
 
 .Abdiwahid_Awesome{
@@ -216,10 +213,7 @@ p, .contactUs{
     background-color: olivedrab;
     kerning: 0vmin;
     quotes: unset;
-    scrollbar-arrow-color: violet;
     align-self: start;
-    unicode-bidi: isolate-override;
-    border-end-end-radius: 10px;
     background-position-y: top;
 }
 
@@ -251,5 +245,5 @@ p, .contactUs{
 
 .Large{
     font-size: x-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
 }

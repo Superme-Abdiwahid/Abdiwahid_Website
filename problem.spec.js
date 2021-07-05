@@ -1,8 +1,19 @@
 const fs = require('fs');
+const cheerio = require('cheerio') //for html testing
+const inlineCss = require('inline-css'); //for css testing
+const cssParser = require('css');
 
 //include custom matchers
 const styleMatchers = require('jest-style-matchers');
 expect.extend(styleMatchers);
+
+const htmlPath = __dirname + '/index.html';
+const html = fs.readFileSync(htmlPath, 'utf-8'); //load the HTML file once
+const cssPath = __dirname + '/css/style.css';
+const css = fs.readFileSync(cssPath, 'utf-8'); //load the HTML file once
+
+//absolute path for relative loading (if needed)
+const baseDir = 'file://'+__dirname+'/';
 
 describe('Source code is valid', () => {
   test('HTML validates without errors', async () => {
@@ -18,30 +29,14 @@ describe('Source code is valid', () => {
       'indent-width':false, //don't need to beautify
       'line-no-trailing-whitespace': false, //don't need to beautify
       'id-class-style':false, //I like dashes in classnames
-      'id-class-no-ad': false, //stupid rule
       'img-req-alt':true,
-      'link-req-noopener':false,
-      'spec-char-escape':false, //for params in link urls
-
+      'spec-char-escape':false //disable for Google Font urls
     }
 
-    const htmlfiles = fs.readdirSync(__dirname).filter((f) => f.endsWith('.html'));
-    for(let f of htmlfiles) {
-      await expect(f).toHaveNoHtmlLintErrorsAsync(lintOpts);
-    }
-  })  
-
-  test('CSS validates without errors', async () => {
-    await expect('css/*.css').toHaveNoCssLintErrorsAsync(); //test all files in css folder
+    await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
   })
 
-  test('JavaScript lints without errors', () => {
-    if(fs.existsSync(__dirname+'/js')) {
-      const jsfiles = fs.readdirSync(__dirname+'/js').filter((f) => f.endsWith('.js'));
-
-      for(let f of jsfiles) {
-        expect(['js/'+f]).toHaveNoEsLintErrors();
-      }
-    }
+  test('CSS validates without errors', async () => {
+    await expect(cssPath).toHaveNoCssLintErrorsAsync();
   })
 });
