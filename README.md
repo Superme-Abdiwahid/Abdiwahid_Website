@@ -5,8 +5,8 @@
 
 <h2> You can find the full website at this link <a href="https://abdiwahid-awesome-website.web.app/"> Abdiwahid's website </a>
 
-<img src="../Img/abdiwahid_outside.jpeg" alt="Picture of Abdiwahid" />
+<img src="./Img/abdiwahid_outside.jpeg" alt="Picture of Abdiwahid" />
 
 <br> </br>
 
-<img src="../Img/Abdiwahid2.jpg" alt="Picture of Abdiwahid" />
+<img src="./Img/Abdiwahid2.jpg" alt="Picture of Abdiwahid" />
